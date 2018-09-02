@@ -36,8 +36,13 @@ interface ConfigurationResponse {
   change_keys: string[];
 }
 
+export const getYearFromDate = (date: string) =>
+  new Date(date + "T00:00:00.000Z").getFullYear();
+
 export class TmdbService {
-  private readonly movieDB = require("moviedb")("1de6071af59ed7706bbfbd09e648558e");
+  private readonly movieDB = require("moviedb")(
+    "1de6071af59ed7706bbfbd09e648558e"
+  );
 
   getImageConfiguration = (): Promise<ImageConfiguration> => {
     return new Promise((resolve, reject) => {
