@@ -1,15 +1,18 @@
 import * as React from "react";
 import "./App.css";
 import { Home } from "./Home/Home";
-import { SearchTVResult } from "./data/TmdbService";
+import { store } from "./store/store";
+import { Provider } from "react-redux";
 
-class App extends React.Component<{ shows: SearchTVResult[]; thumbConfig: (path: string) => string }> {
+class App extends React.Component {
 
   public render() {
     return (
-      <div className="App">
-        <Home shows={this.props.shows} thumbConfig={this.props.thumbConfig} />
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <Home />
+        </div>
+      </Provider>
     );
   }
 }

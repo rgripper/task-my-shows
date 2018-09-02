@@ -39,7 +39,7 @@ interface ConfigurationResponse {
 export class TmdbService {
   private readonly movieDB = require("moviedb")("1de6071af59ed7706bbfbd09e648558e");
 
-  getConfiguration = (): Promise<ImageConfiguration> => {
+  getImageConfiguration = (): Promise<ImageConfiguration> => {
     return new Promise((resolve, reject) => {
       this.movieDB.configuration((err: any, res: ConfigurationResponse) => {
         if (err) {
