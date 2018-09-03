@@ -36,13 +36,29 @@ interface ConfigurationResponse {
   change_keys: string[];
 }
 
+interface TVVideosResponse {
+  id: number;
+  results: TVVideoResult[];
+}
+
+export interface TVVideoResult {
+  id: string;
+  iso_639_1: string;
+  iso_3166_1: string;
+  key: string;
+  name: string;
+  site: string;
+  size: number;
+  type: string;
+}
+
 export const getYearFromDate = (date: string) =>
   new Date(date + "T00:00:00.000Z").getFullYear();
 
+const apiKey = "1de6071af59ed7706bbfbd09e648558e";
+
 export class TmdbService {
-  private readonly movieDB = require("moviedb")(
-    "1de6071af59ed7706bbfbd09e648558e"
-  );
+  private readonly movieDB = require("moviedb")(apiKey);
 
   getImageConfiguration = (): Promise<ImageConfiguration> => {
     return new Promise((resolve, reject) => {
@@ -59,6 +75,18 @@ export class TmdbService {
   searchTv = (query: string | undefined): Promise<SearchTVResult[]> => {
     return new Promise((resolve, reject) => {
       this.movieDB.searchTv({ query }, (err: any, res: SearchTVResponse) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(res.results);
+        }
+      });
+    });
+  };
+
+  getTVVideos = (id: number): Promise<TVVideoResult[]> => {
+    return new Promise((resolve, reject) => {
+      this.movieDB.tvVideos({ id }, (err: any, res: TVVideosResponse) => {
         if (err) {
           reject(err);
         } else {

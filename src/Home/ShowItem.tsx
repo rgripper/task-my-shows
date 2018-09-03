@@ -4,9 +4,10 @@ import * as classNames from "classnames";
 
 export const ShowItem = (props: {
   posterUrl: string;
-  year: number;
+  year: number | null;
   title: string;
   rating: number;
+  playTrailer: () => void
 }) => (
   <article className={styles.root}>
     <img src={props.posterUrl} alt="" />
@@ -18,7 +19,7 @@ export const ShowItem = (props: {
       </button>
     </header>
     <section className={styles['section-play']}>
-      <button className={classNames(styles["button-icon"], styles["button-icon-lg"])} title="Open in youtube">
+      <button className={classNames(styles["button-icon"], styles["button-icon-lg"])} title="Open in youtube" onClick={props.playTrailer}>
         <i className="fab fa-youtube"></i>
       </button>
     </section>

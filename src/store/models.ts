@@ -1,22 +1,24 @@
 import {
   SearchTVResult,
   ImageConfiguration,
-  TmdbService
+  TmdbService,
+  TVVideoResult
 } from "../api/TmdbService";
 import { createModel } from "@rematch/core";
 
 const tmdbService = new TmdbService();
 
-export type State = {
+export interface State {
   shows: typeof shows.state;
+  trailer: typeof trailer.state;
   imageConfiguration: typeof imageConfiguration.state;
-};
+}
 
-export type ShowsState = {
+export interface ShowsState {
   items: SearchTVResult[];
   query: string;
   isSearching: boolean;
-};
+}
 
 export const shows = createModel({
   state: { items: [], query: "", isSearching: false } as ShowsState,
@@ -44,7 +46,33 @@ export const shows = createModel({
   }
 });
 
-export type ImageConfigurationState = { value: undefined | ImageConfiguration };
+export interface TrailerState {
+  items: TVVideoResult[] | undefined;
+  isLoading: boolean;
+}
+
+export const trailer = createModel({
+  state: { items: undefined, isLoading: false } as TrailerState,
+  reducers: {
+    startLoading (state: TrailerState): TrailerState {
+      return { ...state, items: undefined, isLoading: true };
+    },
+    set (state: TrailerState, items: TVVideoResult[] | undefined): TrailerState {
+      return { ...state, items, isLoading: false };
+    }
+  },
+  effects: {
+    async load(id: number) {
+      this.startLoading();
+      const videos = await tmdbService.getTVVideos(id);
+      this.set(videos);
+    }
+  }
+});
+
+export interface ImageConfigurationState {
+  value: undefined | ImageConfiguration;
+}
 
 export const imageConfiguration = createModel({
   state: { value: undefined } as ImageConfigurationState,
