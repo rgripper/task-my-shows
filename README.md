@@ -1,5 +1,7 @@
 ## My Shows task
 
+https://rgripper.github.io/task-my-shows/
+
 ### Running
 
 Usual commands: `yarn start`, `yarn test`, `yarn build`.
