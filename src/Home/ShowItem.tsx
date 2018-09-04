@@ -20,7 +20,7 @@ export const ShowItem = (props: {
     </header>
     <section className={styles['section-play']}>
       <button className={classNames(styles["button-icon"], styles["button-icon-lg"])} title="Open in youtube" onClick={props.onPlayTrailer}>
-        <i className="fab fa-youtube"></i>
+        <i className="fab fa-youtube"/>
       </button>
     </section>
     <section>

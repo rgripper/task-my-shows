@@ -25,7 +25,7 @@ const _TrailerDialog = (props: {
           <div>Loading...</div>
         ) : props.videoId ? (
           <div>
-            <button onClick={props.onClose}><i className="fas fa-times"></i></button>
+            <button onClick={props.onClose}><i className="fas fa-times"/></button>
             <YouTube videoId={props.videoId} opts={opts} />
           </div>
         ) : null}
