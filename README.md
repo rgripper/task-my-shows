@@ -1,5 +1,9 @@
 ## My Shows task
 
+### Running
+
+Usual commands: `yarn start`, `yarn test`, `yarn build`.
+
 ### Tech choices
 
 - Based on create-react-app
@@ -9,3 +13,7 @@
 - `rematch` on top of Redux for state management
 - `react-router` for navigation
 - `moviedb` for connecting to TMDB's API v3
+
+### Tests
+
+For demo purposes there are 2 tests in  `/src/Home/ShowItem.spec.tsx`.
