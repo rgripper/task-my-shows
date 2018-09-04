@@ -1,0 +1,91 @@
+.App__root___2je1L {
+  margin: 1rem auto;
+  max-width: 60rem; }
+.ShowItem__root___3Q0EX {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  display: -ms-flexbox;
+  display: flex; }
+  .ShowItem__root___3Q0EX:not(:last-child) {
+    margin-bottom: 1rem; }
+  .ShowItem__root___3Q0EX > :not(:last-child) {
+    margin-right: 1rem; }
+  .ShowItem__root___3Q0EX > img {
+    height: 5rem;
+    width: 5rem;
+    -o-object-fit: cover;
+       object-fit: cover; }
+    .ShowItem__root___3Q0EX > img[src=''] {
+      background: #eee; }
+  .ShowItem__root___3Q0EX > header {
+    -ms-flex: 1 1;
+        flex: 1 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .ShowItem__root___3Q0EX > .ShowItem__section-play___2a-Hj {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .ShowItem__root___3Q0EX .ShowItem__button-icon___2tyge {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer; }
+  .ShowItem__root___3Q0EX .ShowItem__button-icon-lg___9vUaL {
+    font-size: 1.5rem; }
+.SearchBar__root___1-qgD {
+  display: -ms-flexbox;
+  display: flex;
+  border: 0.075rem solid #ccc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #ccc; }
+  .SearchBar__root___1-qgD > i {
+    margin-right: 0.5rem; }
+  .SearchBar__root___1-qgD > input {
+    -ms-flex: 1 1;
+        flex: 1 1;
+    border: 0;
+    outline: 0;
+    font-size: 1.125rem; }
+.Home__root___3Yvhg > :first-child {
+  margin-bottom: 1rem; }
+.TrailerDialog__root___35F3j {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .TrailerDialog__root___35F3j > * {
+    margin-top: 20vh;
+    padding: 2rem;
+    background: black;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    position: relative; }
+    .TrailerDialog__root___35F3j > * > button {
+      background: transparent;
+      padding: 0.5rem;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      color: white;
+      position: absolute;
+      font-size: 1.5rem;
+      top: 0;
+      right: 0; }
+body{margin:0;padding:0;font-family:sans-serif}
+/*# sourceMappingURL=main.8b64ca3f.css.map*/
