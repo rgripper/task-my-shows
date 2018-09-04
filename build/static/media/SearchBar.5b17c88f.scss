@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  border: 0.075rem solid #ccc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  color: #ccc;
+
+  > i {
+    margin-right: 0.5rem;
+  }
+
+  > input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    font-size: 1.125rem;
+  }
+}
