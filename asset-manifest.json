@@ -1,11 +1,6 @@
 {
-  "main.css": "static/css/main.65027555.css",
-  "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.f2c685aa.js",
-  "main.js.map": "static/js/main.f2c685aa.js.map",
-  "static\\media\\App.scss": "static/media/App.e3178b2a.scss",
-  "static\\media\\Home.scss": "static/media/Home.9548ac7f.scss",
-  "static\\media\\SearchBar.scss": "static/media/SearchBar.5b17c88f.scss",
-  "static\\media\\ShowItem.scss": "static/media/ShowItem.b16b3841.scss",
-  "static\\media\\TrailerDialog.scss": "static/media/TrailerDialog.43b8c0b5.scss"
+  "main.css": "static/css/main.8b64ca3f.css",
+  "main.css.map": "static/css/main.8b64ca3f.css.map",
+  "main.js": "static/js/main.4bb536f6.js",
+  "main.js.map": "static/js/main.4bb536f6.js.map"
 }
