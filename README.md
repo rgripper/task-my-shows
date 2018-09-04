@@ -13,7 +13,8 @@ Usual commands: `yarn start`, `yarn test`, `yarn build`.
 - `rematch` on top of Redux for state management
 - `react-router` for navigation
 - `moviedb` for connecting to TMDB's API v3
+- For test there is `jest` with `enzyme`
 
 ### Tests
 
-For demo purposes there are 2 tests in  `/src/Home/ShowItem.spec.tsx`.
+For demo purposes there are 2 tests in `/src/Home/ShowItem.spec.tsx`.
