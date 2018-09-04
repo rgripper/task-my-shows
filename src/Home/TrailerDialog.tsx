@@ -16,7 +16,7 @@ const opts = {
 const _TrailerDialog = (props: {
   videoId: string | undefined;
   isLoading: boolean;
-  close: () => void;
+  onClose: () => void;
 }) => (
   <>
     {(props.isLoading || props.videoId) && (
@@ -25,7 +25,7 @@ const _TrailerDialog = (props: {
           <div>Loading...</div>
         ) : props.videoId ? (
           <div>
-            <button onClick={props.close}><i className="fas fa-times"></i></button>
+            <button onClick={props.onClose}><i className="fas fa-times"></i></button>
             <YouTube videoId={props.videoId} opts={opts} />
           </div>
         ) : null}
@@ -41,5 +41,5 @@ export const TrailerDialog = connect((state: State) => ({
   isLoading: state.trailer.isLoading
 }),
 ({ trailer }: any) => ({
-  close: () => trailer.set(undefined)
+  onClose: () => trailer.set(undefined)
 }))(_TrailerDialog);

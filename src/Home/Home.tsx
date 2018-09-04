@@ -16,7 +16,7 @@ interface MappedStateProps {
 }
 
 interface MappedDispatchProps {
-  playTrailer: (id: number) => void;
+  onPlayTrailer: (id: number) => void;
 }
 
 type Props = MappedStateProps & MappedDispatchProps;
@@ -42,7 +42,7 @@ class _Home extends React.Component<Props> {
               title={x.name}
               year={x.first_air_date ? getYearFromDate(x.first_air_date) : null}
               posterUrl={thumbConfig(x.poster_path)}
-              playTrailer={() => this.props.playTrailer(x.id)}
+              onPlayTrailer={() => this.props.onPlayTrailer(x.id)}
             />
           ))
         )}
@@ -60,6 +60,6 @@ export const Home = connect(
       : undefined
   }),
   ({ trailer }: any): MappedDispatchProps => ({
-    playTrailer: (id: number) => trailer.load(id)
+    onPlayTrailer: (id: number) => trailer.load(id)
   })
 )(_Home);

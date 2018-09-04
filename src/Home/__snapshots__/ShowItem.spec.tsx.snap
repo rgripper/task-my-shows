@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ShowItem /> should render successfully 1`] = `
+<article
+  className="root"
+>
+  <img
+    alt=""
+    src=""
+  />
+  <header>
+    <small>
+      2018
+    </small>
+    <div>
+      Some title
+    </div>
+    <button
+      className="button-icon"
+    >
+      <i
+        className="fas fa-heart"
+      />
+    </button>
+  </header>
+  <section
+    className="section-play"
+  >
+    <button
+      className="button-icon button-icon-lg"
+      onClick={[MockFunction]}
+      title="Open in youtube"
+    >
+      <i
+        className="fab fa-youtube"
+      />
+    </button>
+  </section>
+  <section>
+    <small>
+      Rating
+    </small>
+    <div>
+      800
+      %
+    </div>
+  </section>
+  <section>
+    <button
+      className="button-icon"
+    >
+      <i
+        className="fas fa-clipboard-list"
+      />
+    </button>
+  </section>
+</article>
+`;

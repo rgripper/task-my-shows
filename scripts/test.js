@@ -27,5 +27,4 @@ if (
   argv.push('--watch');
 }
 
-
 jest.run(argv);
